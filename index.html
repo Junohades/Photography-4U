@@ -3,35 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scroll Background Slideshow</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Fixed Navigation -->
   <nav class="navbar">
     <a href="#section1">Home</a>
     <a href="#section2">About</a>
-    <a href="#section3">Gallery</a>
+    <a href="#portfolio-grid">Portfolio</a>
   </nav>
 
+  <!-- Background Slideshow -->
   <div class="background-slideshow">
-    <img src="https://picsum.photos/id/1015/1920/1080" class="bg active" />
-    <img src="https://picsum.photos/id/1025/1920/1080" class="bg" />
-    <img src="https://picsum.photos/id/1035/1920/1080" class="bg" />
+    <!-- Replace with your own slideshow images -->
+    <img src="images/slideshow/slide1.jpg" class="bg active" />
+    <img src="images/slideshow/slide2.jpg" class="bg" />
+    <img src="images/slideshow/slide3.jpg" class="bg" />
   </div>
 
-  <section id="section1" class="content-section">
-    <h1>Welcome</h1>
-    <p>This is your intro section.</p>
+  <!-- Section 1 -->
+  <section id="section1" class="content-section fade-in">
+    <h1 class="headline">Welcome to My Portfolio</h1>
+    <h3 class="subtitle">Creative Design & Photography</h3>
+    <p class="body-text">Here is where you can tell visitors who you are and what you do. This is your opening statement.</p>
   </section>
 
-  <section id="section2" class="content-section">
-    <h1>About</h1>
-    <p>Your about text goes here.</p>
+  <!-- Section 2 -->
+  <section id="section2" class="content-section fade-in">
+    <h1 class="headline">About Me</h1>
+    <h3 class="subtitle">Passionate About Art</h3>
+    <p class="body-text">This section can describe your background, your style, and your unique approach to work.</p>
   </section>
 
-  <section id="section3" class="content-section">
-    <h1>Gallery</h1>
-    <p>More content here.</p>
+  <!-- Portfolio Grid Placeholder -->
+  <section id="portfolio-grid" class="content-section fade-in">
+    <h1 class="headline">My Work</h1>
+    <div class="grid-gallery">
+      <!-- Replace with your own grid images later -->
+      <img src="images/grid/grid1.jpg" alt="Project 1">
+      <img src="images/grid/grid2.jpg" alt="Project 2">
+      <img src="images/grid/grid3.jpg" alt="Project 3">
+    </div>
   </section>
 
   <script src="script.js"></script>
