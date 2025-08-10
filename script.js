@@ -1,22 +1,16 @@
-// Smooth Scrolling
-document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
+const backgrounds = document.querySelectorAll('.background-slideshow img');
+const sections = document.querySelectorAll('.content-section');
+
+window.addEventListener('scroll', () => {
+  let index = 0;
+  sections.forEach((section, i) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= window.innerHeight / 2) {
+      index = i;
+    }
+  });
+
+  backgrounds.forEach((bg, i) => {
+    bg.classList.toggle('active', i === index);
   });
 });
-
-// Fade-in on scroll
-const faders = document.querySelectorAll('.fade-section');
-const appearOptions = { threshold: 0.2 };
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader => appearOnScroll.observe(fader));
