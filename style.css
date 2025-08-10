@@ -9,6 +9,7 @@ body {
   color: white;
 }
 
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -23,8 +24,10 @@ body {
 .navbar a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
+/* Background Slideshow */
 .background-slideshow {
   position: fixed;
   top: 0;
@@ -50,7 +53,51 @@ body {
   opacity: 1;
 }
 
+/* Sections */
 .content-section {
   min-height: 100vh;
   padding: 120px 20px;
+}
+
+/* Typography */
+.headline {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+.body-text {
+  font-size: 1rem;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Grid gallery */
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.grid-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
